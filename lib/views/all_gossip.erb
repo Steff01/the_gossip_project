@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>Afficher liste gossip</title>
+  </head>
+  <body>
+    <h1>Tous les gossips</h1>
+    <p>Voici tous tes potins, BG</p>
+<% CSV.foreach("/home/steff/Documents/Semaine4/the_gossip_project/lib/db/gossip.csv").with_index do |csv_line, num_row| %>
+        <p>
+          <%= num_row+1 %> : <%= csv_line[0] %> , <%= csv_line[1] %>
+        </p>
+      <% end %>
+  </body>
+</html>
